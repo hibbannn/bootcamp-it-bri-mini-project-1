@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2023 at 12:49 AM
+-- Generation Time: May 30, 2023 at 03:54 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -38,6 +38,13 @@ CREATE TABLE `actors` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `actors`
+--
+
+INSERT INTO `actors` (`id`, `username`, `password`, `role_id`, `verified`, `active`, `created_at`, `updated_at`) VALUES
+(1, 'suadmin', 'root', 1, 'true', 'true', '2023-05-30 01:47:02', '2023-05-30 01:53:36');
+
 -- --------------------------------------------------------
 
 --
@@ -63,6 +70,14 @@ CREATE TABLE `roles` (
   `id` int(10) UNSIGNED NOT NULL,
   `role_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `role_name`) VALUES
+(1, 'Super Admin'),
+(2, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -119,7 +134,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `actors`
 --
 ALTER TABLE `actors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `register_approvals`
@@ -131,7 +146,7 @@ ALTER TABLE `register_approvals`
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
