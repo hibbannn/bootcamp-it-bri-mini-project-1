@@ -23,9 +23,6 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `actors`
---
 
 CREATE TABLE `actors` (
   `id` bigint(20) UNSIGNED NOT NULL,
